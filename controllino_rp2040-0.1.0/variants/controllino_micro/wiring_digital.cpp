@@ -7,18 +7,18 @@
 #include "controllino_driver.h"
  
 /* Controllino RP2040 digital API */
-void setDigitalThreshold(pin_size_t pin, uint32_t threshold) {
+extern void setDigitalThreshold(pin_size_t pin, uint32_t threshold) {
     if (getControllinoRp2040Pin(pin) != nullptr)
         setDigitalThreshold(getControllinoRp2040Pin(pin), threshold);
 }
 
-uint32_t getDigitalThreshold(pin_size_t pin) {
+extern uint32_t getDigitalThreshold(pin_size_t pin) {
     if (getControllinoRp2040Pin(pin) != nullptr)
         return getDigitalThreshold(getControllinoRp2040Pin(pin));
     return 0;
 }
 
-void pinMode(ControllinoRp2040Pin* pin, PinMode mode)
+extern void pinMode(ControllinoRp2040Pin* pin, PinMode mode)
 {
     switch (pin->getType())
     {
@@ -60,7 +60,7 @@ void pinMode(ControllinoRp2040Pin* pin, PinMode mode)
     pin->setMode(mode);
 }
 
-PinStatus digitalRead(ControllinoRp2040Pin* pin)
+extern PinStatus digitalRead(ControllinoRp2040Pin* pin)
 {
     PinStatus pinStatus = LOW;
     switch (pin->getType())
@@ -95,7 +95,7 @@ PinStatus digitalRead(ControllinoRp2040Pin* pin)
     return pinStatus;
 }
 
-void digitalWrite(ControllinoRp2040Pin* pin, PinStatus value)
+extern void digitalWrite(ControllinoRp2040Pin* pin, PinStatus value)
 {
     switch (pin->getType())
     {
@@ -119,7 +119,7 @@ void digitalWrite(ControllinoRp2040Pin* pin, PinStatus value)
 }
  
 /* Set the digital threshold to implement a digital input with an analog input only pin */
-void setDigitalThreshold(ControllinoRp2040Pin* pin, uint32_t threshold)
+extern void setDigitalThreshold(ControllinoRp2040Pin* pin, uint32_t threshold)
 {
     switch (pin->getType())
     {
@@ -133,7 +133,7 @@ void setDigitalThreshold(ControllinoRp2040Pin* pin, uint32_t threshold)
 }
  
 /* Get current digital threshold */
-uint32_t getDigitalThreshold(ControllinoRp2040Pin* pin)
+extern uint32_t getDigitalThreshold(ControllinoRp2040Pin* pin)
 {
     return pin->_getDigitalThreshold();
 }

@@ -64,19 +64,19 @@ ControllinoRp2040Pin* getControllinoRp2040Pin(int pin);
 /**
  *\brief Similar to Arduino API functions for compatibility with ControllinoRp2040Pin*
  */
-void pinMode(ControllinoRp2040Pin* pin, PinMode mode);
-PinStatus digitalRead(ControllinoRp2040Pin* pin);
-void digitalWrite(ControllinoRp2040Pin* pin, PinStatus value);
-int analogRead(ControllinoRp2040Pin* pin);
-void analogWrite(ControllinoRp2040Pin* pin, int value);
+extern void pinMode(ControllinoRp2040Pin* pin, PinMode mode);
+extern PinStatus digitalRead(ControllinoRp2040Pin* pin);
+extern void digitalWrite(ControllinoRp2040Pin* pin, PinStatus value);
+extern int analogRead(ControllinoRp2040Pin* pin);
+extern void analogWrite(ControllinoRp2040Pin* pin, int value);
  
 /**
  *\brief Digital threshold API to implement a digital input with an analog input only pin 
  */
-void setDigitalThreshold(ControllinoRp2040Pin* pin, uint32_t threshold);
-uint32_t getDigitalThreshold(ControllinoRp2040Pin* pin);
-void setDigitalThreshold(pin_size_t pin, uint32_t threshold); // From integer pin definition
-uint32_t getDigitalThreshold(pin_size_t pin); // From integer pin definition
+extern void setDigitalThreshold(ControllinoRp2040Pin* pin, uint32_t threshold);
+extern uint32_t getDigitalThreshold(ControllinoRp2040Pin* pin);
+extern void setDigitalThreshold(pin_size_t pin, uint32_t threshold); // From integer pin definition
+extern uint32_t getDigitalThreshold(pin_size_t pin); // From integer pin definition
 
 /**
  * \brief User can access peripherals interfaces

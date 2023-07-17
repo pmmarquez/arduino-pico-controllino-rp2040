@@ -15,7 +15,7 @@
 #include <hardware/adc.h>
  
 /* Controllino RP2040 analog API */
-extern int analogRead(ControllinoRp2040Pin* pin)
+int analogRead(ControllinoRp2040Pin* pin)
 {
     int adcValue = 0;
     switch (pin->getType())
@@ -63,7 +63,7 @@ extern int analogRead(ControllinoRp2040Pin* pin)
     return adcValue;
 }
 
-extern void analogWrite(ControllinoRp2040Pin* pin, int value)
+void analogWrite(ControllinoRp2040Pin* pin, int value)
 {
     switch (pin->getType())
     {

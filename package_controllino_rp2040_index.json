@@ -12,7 +12,7 @@
         {
           "category": "Contributed",
           "name": "CONTROLLINO RP2040 Boards",
-          "url": "https://github.com/pmmarquez/arduino-pico-controllino_neo/releases/download/global/controllino_neo-0.1.0.zip",
+          "url": "https://github.com/pmmarquez/arduino-pico-controllino-rp2040/releases/download/global/controllino_rp2040-0.1.0.zip",
           "version": "0.1.0",
           "architecture": "rp2040",
           "archiveFileName": "controllino_rp2040-0.1.0.zip",
@@ -60,8 +60,8 @@
           "help": {
             "online": ""
           },
-          "size": "85073679",
-          "checksum": "SHA-256:68424f0d1c3cd4669b4647c8f8a1e5fd2e3ff662bfeb9a861e5a156ec3557f9f"
+          "size": "85194499",
+          "checksum": "SHA-256:44df0cea69d5e1320b6fff9f41fb2615f1e5ce8b32c75c25116c78c16aae8ce7"
         }
       ],
       "tools": [

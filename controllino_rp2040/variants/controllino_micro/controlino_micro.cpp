@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "controllino_driver.h"
+#include "controllino_wiring.h"
 
 /* Peripherals interfaces */
 cy8c95xx_t* neo_cy8c95xx;
